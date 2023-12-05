@@ -11,7 +11,7 @@
                 </v-col>
                 <v-col cols="12" sm="4"> 
                     <v-car-text class="pt-2">
-                        <v-btn v-for="icon in icons" :key="icon" class="mx-1 white--text" icon>
+                        <v-btn v-for="(icon, index) in icons" :key="icon" class="mx-1 white--text" icon @click="navigateToUrl(index)">
                             <v-icon size="24px">{{ icon }}</v-icon>
                         </v-btn>
                     </v-car-text>
@@ -35,8 +35,14 @@
         data: () => ({
             icons:[
                 "mdi-linkedin", "mdi-github"
-            ]
-        })
+            ],
+            urls: ['https://www.example.com/home', '(icon, index)'],
+        }),
+        methods: {
+            navigateToUrl(index) {
+            window.location.href = this.urls[index];
+        },
+ },
     }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <v-app id="home" :style="{background: $vuetify.theme.themes.dark.background}">
-    <NavBar/>
-    <v-container fluid>
+  <v-app :style="{background: $vuetify.theme.themes.dark.background}">
+    <NavBar id="home"/>
+    <v-container fluid >
       <v-row>
         <v-col col="6">
           <v-img src="../../public/cookie.png" contain max-height="400">
@@ -16,8 +16,8 @@
           </p>
           <v-btn tile color="#2699E6" dark>About Porject</v-btn>
         </v-col>
-        <v-col cols="12" class="padd">
-            <div class="first" id="about">
+        <v-col cols="12" class="padd" id="about">
+            <div class="first" >
               <v-row>
                 <v-col cols="12">
                   <div class="child1 bgColor1">
@@ -67,7 +67,7 @@
                     If you have any feedback or any question, please reach out to me
                   </p>
                 </v-col>
-                <v-col class="cols-align" cols="5">
+                <v-col class="cols-align btn" cols="5">
                   <v-btn tile color="#2699E6" dark class="mt-16">
                     Contact 
                     <v-icon color="#1e1e1e"> mdi-bell </v-icon>
@@ -78,9 +78,9 @@
           </div>
           <v-toolbar class="topTolbar" color="#111111" dark flat>
             <div style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right:0; text-align:center">
-              <v-btn text>Home</v-btn>
-              <v-btn text>About Add-on Project</v-btn>
-              <v-btn text>Contact</v-btn>
+              <v-btn text @click="scroll('home')">Home</v-btn>
+              <v-btn text @click="scroll('about')">About Add-on Project</v-btn>
+              <v-btn text @click="scroll('contact')">Contact</v-btn>
             </div>
           </v-toolbar>
         </v-col>
@@ -194,7 +194,7 @@
   }
 
   .col-12.padd{
-    padding: 12px 0 !important;
+    padding-top: 150px;
   }
 
   .col-12.childcol{
@@ -204,5 +204,17 @@
   h1.number{
     font-size: 50px;
     font-weight: bold;
+  }
+  .btn {
+    flex-flow: wrap-reverse;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-content: center;
+  }
+  .cols-align .mt-16{
+    margin-top: 0px !important;
+    display: flex;
+    vertical-align: middle;
   }
 </style>

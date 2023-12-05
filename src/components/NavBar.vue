@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app color="#111111" dark flat class="px-8">
+    <v-app-bar app color="#111111" dark flat class="px-8" >
         <v-btn icon>
             <v-icon color="#2699E6">
                cookie 
@@ -18,7 +18,7 @@
         methods: {
             scroll(refName){
                 const element = document.getElementById(refName);
-                element.scrollIntoView({behavior: "smotoh"});
+                element.scrollIntoView({behavior: "smooth"});
             }
         }
     }
