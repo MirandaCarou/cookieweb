@@ -14,7 +14,7 @@
             A Chrome/Firefox Add-on for cookie control that allows the user to manage  <br/>
             the use of essential and non-essential cookies by websites. 
           </p>
-          <v-btn href="https://github.com/MirandaCarou/Cookie-Blocker-Extension/blob/main/README.md" tile color="#2699E6" dark>About Porject</v-btn>
+          <v-btn href="https://github.com/MirandaCarou/Cookie-Blocker-Extension/blob/main/README.md" tile color="#2699E6" dark>About Project</v-btn>
         </v-col>
         <v-col cols="12" class="padd" id="about">
             <div class="first" >
